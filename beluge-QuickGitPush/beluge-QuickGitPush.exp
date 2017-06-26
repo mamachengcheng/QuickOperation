@@ -1,0 +1,12 @@
+#!/usr/bin/expect
+#"{}"内请更换为自己github的帐号信息
+
+set userName {username}
+set password {password}
+set timeout 100
+spawn git push origin master 
+expect "Username"
+send "$userName\n"
+expect "Password"
+send "$password\n"
+expect eof
